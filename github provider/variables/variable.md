@@ -71,3 +71,35 @@ resource "null_resource" "name" {
     }
   
 }
+
+
+9Demo Loop-for function-upper
+
+variable "students" {
+  default = ["reem","guy","pari"] 
+}
+
+output "students_names" {
+    value = var.students
+  
+}
+
+output "students_names_caps" {
+    value = [for name in var.students : upper(name)]
+  
+}
+Count Vaule taken from out put of function-lenght
+
+locals {
+  names = ["bob", "kevin", "stewart","reem"]
+}
+resource "null_resource" "names" {
+  count = length(local.names)
+  triggers = {
+    name = local.names[count.index]
+  }
+}
+
+output "name" {
+  value = null_resource.names
+}
