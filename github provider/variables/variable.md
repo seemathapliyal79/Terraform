@@ -103,3 +103,23 @@ resource "null_resource" "names" {
 output "name" {
   value = null_resource.names
 }
+
+```
+10 Demo Provisoner local-exec
+
+```
+resource "null_resource" "sanddevboxa" {
+  provisioner "local-exec" {
+    command = "echo all is well"
+  }
+}
+10 Demo A out put something in a file from localmachine without actually executing a remote resource
+
+resource "null_resource" "sanddevboxa" {
+  provisioner "local-exec" {
+    command = "echo all is well >> temp.txt"
+  }
+}
+
+```
+
