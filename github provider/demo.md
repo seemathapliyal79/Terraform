@@ -22,7 +22,7 @@ References: Git Hub provider Code https://registry.terraform.io/providers/integr
 
 Create repo code https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 
-2Demo Create a repo and output repo clone url
+2 Demo Create a repo and output repo clone url
 
 terraform {
   required_providers {
