@@ -1,9 +1,13 @@
+'''
 1Demo
-
+'''
 output "student_name" {
     value = "reem"
 }
+
+'''
 2Demo - Locals and Output block and using variables in output block
+''''
 
 # using local variable block 
 locals {
@@ -15,8 +19,9 @@ output "student_name" {
     value = local.student
 }
 
-
+'''
 3Demo a List and ouput list values
+'''
 
 locals {
   students=["reem","guy","pari"]
@@ -25,7 +30,10 @@ locals {
 output "student_names" {
     value = local.students
 }
+
+'''
 4Demo Output element in a list
+'''
 
 locals {
   students=["reem","guy","pari"]
@@ -34,7 +42,10 @@ locals {
 output "student_names" {
     value = local.students[1]
 }
+
+'''
 5 Demo Introduction to null resource
+'''
 
 locals {
   students=["reem","guy","pari"]
@@ -119,8 +130,10 @@ resource "null_resource" "names" {
 output "name" {
   value = null_resource.names
 }
-10 Demo Provisoner local-exec
 
+''''
+10 Demo Provisoner local-exec
+''''
 
 resource "null_resource" "sanddevboxa" {
   provisioner "local-exec" {
