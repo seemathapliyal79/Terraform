@@ -28,6 +28,7 @@ output "student_name" {
 '''
 3. by using variable keyword and The label after the variable keyword is the name for the variable.
 
+'''
 variable "image_id" {
 type = string
 }
