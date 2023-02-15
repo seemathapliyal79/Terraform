@@ -1,0 +1,122 @@
+1Demo
+
+output "student_name" {
+    value = "reem"
+}
+2Demo - Locals and Output block and using variables in output block
+
+# using local variable block 
+locals {
+  student="reem"
+}
+
+#refrencing or using variable 
+output "student_name" {
+    value = local.student
+}
+
+
+3Demo a List and ouput list values
+
+locals {
+  students=["reem","guy","pari"]
+}
+
+output "student_names" {
+    value = local.students
+}
+4Demo Output element in a list
+
+locals {
+  students=["reem","guy","pari"]
+}
+
+output "student_names" {
+    value = local.students[1]
+}
+5 Demo Introduction to null resource
+
+locals {
+  students=["reem","guy","pari"]
+}
+
+resource "null_resource" "students" {
+}
+output "student_names" {
+    value = local.students[1]
+}
+
+6 Demo Loopong construct count
+
+locals {
+  students=["reem","guy","pari"]
+}
+
+resource "null_resource" "students" {
+  count = 3
+
+}
+8Demo - Understand trigger and count index
+
+#understand trigger and count index 
+locals {
+  students=["Reem","Siva","Pari"]
+
+}
+
+resource "null_resource" "name" {
+    count = 3
+    triggers = {
+        grade=local.students[count.index]
+    }
+  
+}
+
+
+9Demo Loop-for function-upper
+
+variable "students" {
+  default = ["reem","guy","pari"] 
+}
+
+output "students_names" {
+    value = var.students
+  
+}
+
+output "students_names_caps" {
+    value = [for name in var.students : upper(name)]
+  
+}
+Count Vaule taken from out put of function-lenght
+
+locals {
+  names = ["bob", "kevin", "stewart","reem"]
+}
+resource "null_resource" "names" {
+  count = length(local.names)
+  triggers = {
+    name = local.names[count.index]
+  }
+}
+
+output "name" {
+  value = null_resource.names
+}
+
+```
+10 Demo Provisoner local-exec
+
+```
+resource "null_resource" "sanddevboxa" {
+  provisioner "local-exec" {
+    command = "echo all is well"
+  }
+}
+10 Demo A out put something in a file from localmachine without actually executing a remote resource
+
+resource "null_resource" "sanddevboxa" {
+  provisioner "local-exec" {
+    command = "echo all is well >> temp.txt"
+  }
+}
