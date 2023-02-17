@@ -1,3 +1,5 @@
+## This is the use of the dynamic block. You can create multiple ingress rules using a for_each loop with a dynamic block.
+
 provider "aws" {
 	
 	region     = "us-east-1"
