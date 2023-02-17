@@ -1,9 +1,10 @@
-1Demo
+#  1Demo
 
 output "student_name" {
     value = "reem"
 }
-2Demo - Locals and Output block and using variables in output block
+
+##2Demo - Locals and Output block and using variables in output block
 
 # using local variable block 
 locals {
@@ -16,7 +17,7 @@ output "student_name" {
 }
 
 
-3Demo a List and ouput list values
+## 3Demo a List and ouput list values
 
 locals {
   students=["reem","guy","pari"]
@@ -25,7 +26,7 @@ locals {
 output "student_names" {
     value = local.students
 }
-4Demo Output element in a list
+## 4Demo Output element in a list
 
 locals {
   students=["reem","guy","pari"]
@@ -34,7 +35,7 @@ locals {
 output "student_names" {
     value = local.students[1]
 }
-5 Demo Introduction to null resource
+##5 Demo Introduction to null resource
 
 locals {
   students=["reem","guy","pari"]
@@ -46,7 +47,7 @@ output "student_names" {
     value = local.students[1]
 }
 
-6 Demo Loopong construct count
+## 6 Demo Loopong construct count
 
 locals {
   students=["reem","guy","pari"]
@@ -56,7 +57,7 @@ resource "null_resource" "students" {
   count = 3
 
 }
-8Demo - Understand trigger and count index
+## 8Demo - Understand trigger and count index
 
 #understand trigger and count index 
 locals {
@@ -73,7 +74,7 @@ resource "null_resource" "name" {
 }
 
 
-9Demo Loop-for function-upper
+## 9Demo Loop-for function-upper
 
 variable "students" {
   default = ["reem","guy","pari"] 
@@ -105,7 +106,7 @@ output "name" {
 }
 
 ```
-10 Demo Provisoner local-exec
+##10 Demo Provisoner local-exec
 
 ```
 resource "null_resource" "sanddevboxa" {
@@ -113,7 +114,7 @@ resource "null_resource" "sanddevboxa" {
     command = "echo all is well"
   }
 }
-10 Demo A out put something in a file from localmachine without actually executing a remote resource
+## 10 Demo A out put something in a file from localmachine without actually executing a remote resource
 
 resource "null_resource" "sanddevboxa" {
   provisioner "local-exec" {
