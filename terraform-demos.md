@@ -72,7 +72,6 @@ resource "null_resource" "students" {
 
 '''
 # 7 Demo for each
-
 will be re visited 
 8Demo - Understand trigger and count index
 '''
@@ -89,9 +88,11 @@ resource "null_resource" "name" {
     }
   
 }
+
 '''
 # 9 Demo Loop-for function-upper
 '''
+
 variable "students" {
   default = ["reem","guy","pari"] 
 }
@@ -118,6 +119,7 @@ resource "null_resource" "act" {
 '''
 # 9 Demo c Count Vaule taken from out put of function-lenght
 '''
+
 locals {
   names = ["bob", "kevin", "stewart","reem"]
 }
