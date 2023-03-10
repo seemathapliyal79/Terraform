@@ -6,7 +6,7 @@ output "student_name" {
 }
 
 '''
-2Demo - Locals and Output block and using variables in output block
+# 2Demo - Locals and Output block and using variables in output block
 ''''
 
 # using local variable block 
@@ -20,7 +20,7 @@ output "student_name" {
 }
 
 '''
-3Demo a List and ouput list values
+# 3Demo a List and ouput list values
 '''
 
 locals {
@@ -32,7 +32,7 @@ output "student_names" {
 }
 
 '''
-4Demo Output element in a list
+# 4Demo Output element in a list
 '''
 
 locals {
@@ -44,7 +44,7 @@ output "student_names" {
 }
 
 '''
-5 Demo Introduction to null resource
+# 5 Demo Introduction to null resource
 '''
 
 locals {
@@ -58,7 +58,7 @@ output "student_names" {
 }
 
 '''
-6 Demo Loopong construct count
+# 6 Demo Loopong construct count
 '''
 locals {
   students=["reem","guy","pari"]
@@ -70,7 +70,7 @@ resource "null_resource" "students" {
 }
 
 '''
-7 Demo for each
+# 7 Demo for each
 
 will be re visited 
 8Demo - Understand trigger and count index
@@ -89,7 +89,7 @@ resource "null_resource" "name" {
   
 }
 '''
-9Demo Loop-for function-upper
+# 9 Demo Loop-for function-upper
 '''
 variable "students" {
   default = ["reem","guy","pari"] 
@@ -105,7 +105,7 @@ output "students_names_caps" {
   
 }
 '''
-9 Demi B Simple example where count value is taken from out put of function lenght
+# 9 Demi B Simple example where count value is taken from out put of function lenght
 '''
 locals {
   actors=["amar","akbar","anthony"]
@@ -115,7 +115,7 @@ resource "null_resource" "act" {
   count = length(local.actors)
 }
 '''
-9 Demo c Count Vaule taken from out put of function-lenght
+# 9 Demo c Count Vaule taken from out put of function-lenght
 '''
 locals {
   names = ["bob", "kevin", "stewart","reem"]
@@ -132,7 +132,7 @@ output "name" {
 }
 
 ''''
-10 Demo Provisoner local-exec
+# 10 Demo Provisoner local-exec
 ''''
 
 resource "null_resource" "sanddevboxa" {
@@ -142,7 +142,7 @@ resource "null_resource" "sanddevboxa" {
 }
 
 '''
-10 Demo A out put something in a file from localmachine without actually executing a remote resource
+# 10 Demo A out put something in a file from localmachine without actually executing a remote resource
 '''
 resource "null_resource" "sanddevboxa" {
   provisioner "local-exec" {
@@ -179,7 +179,7 @@ resource "null_resource" "sandbox2" {
     command = "ansible-playbook playbook.yaml"
   }
 }
-#simplest play
+# simplest play
 ---
 - hosts: localhost
   tasks:
@@ -241,10 +241,9 @@ resource "aws_security_group" "main" {
 }
 
 '''
-Using remote exec provisioners following
+## Using remote exec provisioners following
 
-Please note and be careful to replace
-security token, access key, secret key, vpc
+##Please note and be careful to replace security token, access key, secret key, vpc
 ''''
 
 locals {
