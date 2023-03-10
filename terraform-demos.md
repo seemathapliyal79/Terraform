@@ -182,16 +182,19 @@ resource "null_resource" "sandbox2" {
     command = "ansible-playbook playbook.yaml"
   }
 }
+
 # simplest play
+
 ---
 - hosts: localhost
   tasks:
   - name: just do it
     command: date
 
-'''
-Using dynamic block to create multiple security group in VPC
-'''
+###
+# Using dynamic block to create multiple security group in VPC
+###
+
 provider "aws" {
 	
 	region     = "us-east-1"
