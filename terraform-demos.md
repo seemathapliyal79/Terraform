@@ -246,11 +246,11 @@ resource "aws_security_group" "main" {
 	}
 }
 
-'''
-## Using remote exec provisioners following
 
+############
+## Using remote exec provisioners following
 ##Please note and be careful to replace security token, access key, secret key, vpc
-''''
+#############
 
 locals {
   ami_id = "ami-09e67e426f25ce0d7"
@@ -263,10 +263,10 @@ locals {
 provider "aws" {
 region     = "us-east-1" 
  
-access_key = "ASIAWBWEOWFPY7OR3MPW" 
+access_key = "ASIAWY7OR3MPW" 
  
-secret_key = "0kLmrT1a+aWCQv57AuUovak5eUnTfGY7+SytvU9E" 
-token = "FwoGZXIvYXdzEFkaDDy0qZqmAuRHx6rrlSK8AUGCQsOfMC6pe9XtdEB4/q10sfeDzHWbT6+nxAzAq3mvpAzVF6w6MbM8K2ogRw8oyoCqUYp8eS73KEccd4oNpMt5TX2o5w/7anW0TTRexaflrw39cie2YupZMCgV7zBfNT2O+8oG698mlb0l5aV3I+ZkexF/PsFDmqoTgBk/hHf2MrL8PStASmqXlv0RDWeasUwFqqmQqsaicNw+drJWKU/SiTu/75klyxIaxF1klzFTwHdXD/U+UybbmWlEKIykop8GMi22n/CzucooHEyIXUmMtWlCsZAfxQ0LgO7w+A612n8+G7L7UotL6m5F1wxl9ds="
+secret_key = "0kLmrTAuUovak5eUnTfGY7+SytvU9E" 
+token = "FwoGZXIrL8PStASmqXlv0RDWeasUwFqqmQqsaicNw+drJWKU/SiTu/75klyxIaxF1klzFTwHdXD/U+UybbmWlEKIykop8GMi22n/CzucooHEyIXUmMtWlCsZAfxQ0LgO7w+A612n8+G7L7UotL6m5F1wxl9ds="
 
 }
 resource "aws_security_group" "demoaccess" {
